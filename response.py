@@ -5,11 +5,12 @@ print('Content-Type: text/html')
 print('<p>'+str(datos)+'</p>')
 
 nombre=datos.getvalue('nombre')
-contraseña =datos.getvalue('contraseña')
+contraseña =datos.getvalue('contra')
 try:
     conex=mysql.connector.connect(database='db2', host='localhost',user='santiago', password='admin1234' )
     cursor = conex.cursor()
-    insert = "insert into db2 (username,pass) values (%s,%s)" 
+    insert = "insert into db2 (username,pass) values (%s,%s)"
+    contraseña='sha('+contraseña+')' 
     cursor.execute(insert,(nombre,contraseña))
     cursor.commit()
     cursor.close()
