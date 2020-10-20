@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    <link rel="stylesheet" href="css/micss.css">
+    <title>Formulario</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<body>
+    <div class="ui grid" id="content">
+        <div class="ui two wide column">
+
+        </div>
+        <div class="ui twelve wide teal column">
+            <form class="ui form" action="/cgi-bin/login.py" method="POST">
+                <label class="ui label" for="nombre">
+                    Nombre
+                </label>
+                <input id="name" type="text" name="nombre">
+                <label class="ui label" for="contra">
+                    Contraseña 
+                </label>
+                <input id="pass" type="password" name="contra">
+                <input class="ui yellow button" id="sign up" type="submit" value="Registrar">
+                <!--<input class="ui yellow button" id="sign in" type="submit" value="Ingresar">-->
+            </form>
+            
+        </div>
+        <div class="ui two wide column">
+
+        </div>
+    </div>
+</body>
+</html>
